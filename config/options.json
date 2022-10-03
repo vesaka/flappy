@@ -1,0 +1,362 @@
+{
+    "debug": true,
+    "fps": 60,
+    "assetsBaseUrl": "/assets/flappy/",
+    "locale": "en",
+    "defaultLocale": "en",
+    "scale": 32,
+    "world": {
+        "offset": 10,
+        "size": {
+            "width": 800,
+            "height": 600
+        }
+    },
+    "engine": {
+        "world": {
+
+        },
+        "gravity": {
+            "x": 0,
+            "y": 1,
+            "scale": 0.001
+        },
+        "pairs": {
+        },
+        "detector": {}
+    },
+    "app": {
+        "backgroundColor": "#001100",
+        "antialias": true,
+        "autoResize": true
+    },
+    "renderer": {
+        "autoResize": true
+    },
+    "view": {
+        "style": {
+            "display": "flex",
+            "top": 0,
+            "left": 0,
+            "right": 0
+        }
+    },
+    "stage": {
+        "interactive": true,
+        "scale": {
+            "x": 1,
+            "y": 1
+        }
+    },
+    "game": {
+        "width": 800,
+        "height": 600
+    },
+    "fonts": {
+        "main": {
+            "family": "LuckiestGuy"
+        }
+    },
+    "ui": {
+        "style": {
+            "fontFamily": "LuckiestGuy",
+            "fontSize": 44,
+            "fill": "#FFFFFF",
+            "dropShadow": true,
+            "dropShadowAlpha": 0.6,
+            "dropShadowAngle": 1.4,
+            "dropShadowBlur": 3,
+            "letterSpacing": 3
+        },
+        "paralax": {
+            "style": {},
+            "panels": {
+                "far": {
+                    "speed": 1.5,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    }
+                },
+                "near": {
+                    "speed": 4,
+                    "position": {
+                        "x": -30,
+                        "y": 0
+                    },
+                    "scale": 1.3,
+                    "tile": {
+
+                    }
+                }
+            }
+        },
+        "progress": {
+            "background": {
+                "fill": "#001133"
+            },
+            "position": {
+                "y": 300
+            },
+            "size": {
+                "width": 400,
+                "height": 30,
+                "radius": 50,
+                "border": 5
+            },
+            "outer": {
+                "fill": "#553133"
+            },
+            "inner": {
+                "fill": "#001133"
+            }
+        },
+        "logo": {
+            "scale": 0.5,
+            "position": {
+                "y": 100
+            },
+            "size": {
+                "width": 240,
+                "height": 160
+            }
+        },
+        "score": {
+            "position": {
+                "x": 60,
+                "y": 480
+            },
+            "counter": {
+                "default": "000",
+                "minLength": 3,
+                "maxLength": 5,
+                "position": {
+                    "x": 0,
+                    "y": 40
+                },
+                "style": {
+                    "fill": "#FF0055",
+                    "align": "center"
+                }
+            },
+            "label": {
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "style": {
+                    "fill": "#FFFF",
+                    "fontSize": 32
+                }
+            }
+        },
+        "best_score": {
+            "fadingStep": 0.00001,
+            "position": {
+                "x": 60,
+                "y": 50
+            },
+            "label": {
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "style": {
+                    "fontSize": 20
+                }
+            },
+            "highlight": {
+                "position": {
+                    "x": 0,
+                    "y": 40
+                }
+            }
+        },
+        "buttons": {
+            "position": {
+                "x": 400,
+                "y": 50
+            },
+            "offset": {
+                "x": 0.025,
+                "y": 0.05
+            },
+            "default": {
+                "size": 0.0625,
+                "margin": 0.0125,
+                "visible": true
+            },
+            "types": {
+                "fullscreen": {
+                    "index": 0
+                },
+                "smallscreen": {
+                    "index": 0,
+                    "visible": false
+                },
+                "settings": {
+                    "index": 1
+                },
+                "sound_on": {
+                    "index": 2
+                },
+                "sound_off": {
+                    "index": 2,
+                    "visible": false
+                }
+            }
+        },
+        "socials": {
+            "default": {},
+            "apps": {
+                "facebook": {},
+                "instagram": {},
+                "twitter": {}
+            }
+        },
+        "banner": {
+            "splitAt": 0.5,
+            "animation": 2000,
+            "vertical": true,
+            "width": 800,
+            "height": 600,
+            "textures": [
+                {
+                    "frame": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 600,
+                        "height": 480
+                    }
+                },
+                {
+                    "frame": {
+                        "x": 0,
+                        "y": 480,
+                        "width": 600,
+                        "height": 30
+                    }
+                }
+            ],
+            "animations": {
+
+            }
+        }
+    },
+    "models": {
+        "room": {
+            "body": {
+                "type": "static"
+            },
+            "shape": {
+
+            },
+            "fixture": {
+
+            }
+        },
+        "character": {
+            "float": 30,
+            "swing": 3,
+            "mass": 1,
+            "inertia": 0.00075,
+            "states": {
+                "mid": "",
+                "up": "",
+                "down": "",
+                "ready": ""
+            },
+            "size": {
+                "width": 30,
+                "height": 30
+            },
+            "collision_points": "M 0.67058758,15.004153 L4.5189129,6.482862 12.490444,0.98525434 23.485659,1.2601347 30.082788,7.3075033 V 11.98047 l 2.199044,0.82464 1.374402,2.473924 -3.023686,4.398086 -1.649282,2.199043 -9.071052,1.649282 H 11.940683 L 5.3435539,21.051522 Z",
+            "matter": {
+                "isStatic": true,
+                "mass": 1,
+                "restitution": 0.05,
+                "density": 0.001,
+                "collisionFilter": {
+                    "group": 1
+                }
+            }
+        },
+        "obstacles": {
+            "gap": 75,
+            "distance": 150,
+            "columns": 4,
+            "speed": 3,
+            "maxHeight": 0.4,
+            "maxWidth": 0.25,
+            "default": {
+                "gap": 150,
+                "chance": 0.5,
+                "distance": 100,
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                },
+                "size": {
+                    "width": 50,
+                    "height": 200
+                },
+                "matter": {
+                    "isStatic": true,
+                    "mass": 1,
+                    "collisionFilter": {
+                        "group": 1
+                    }
+                }
+            },
+            "types": {
+                "normal": {
+                    "name": "obstacle_green"
+                },
+                "red": {
+                    "name": "obstacle_red"
+                }
+            }
+        }
+    },
+    "screens": {
+        "default": {
+            "animate": {
+                "duration": 500,
+                "end": 0.7,
+                "bounces": 3
+            },
+            "heading": {
+                "align": "center",
+                "fontSize": 32,
+                "position": [
+                    0.5,
+                    0.1
+                ]
+            },
+            "size": {
+                "width": 0.8,
+                "height": 0.8
+            },
+            "position": {},
+            "transition": {}
+        },
+        "game_end": {
+            "styles": {
+                "fontSize": 32,
+                "align": "center"
+            },
+            "buttons": {
+                "restart": {
+                    "position": [
+                        0.5,
+                        0.7
+                    ],
+                    "size": [
+                        0.5,
+                        0.15
+                    ]
+                }
+            }
+        }
+    }
+}

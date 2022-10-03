@@ -1,0 +1,20 @@
+{
+    "ui": {
+        "score": "Score",
+        "best_score": "Best Score",
+        "popups": {
+            "game_reset": {
+                "header": "Game Over",
+                "replay": "Play Again"
+            }
+        }
+    },
+    "socials": {
+        "facebook": {
+            "name": "Facebook"
+        },
+        "instagram": {
+            "name": "Instagram"
+        }
+    }
+}

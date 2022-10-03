@@ -1,0 +1,59 @@
+import Model from '$lib/game/core/2d/models/matter-model';
+import { Graphics, Sprite, Texture } from 'pixi.js';
+
+
+class Land extends Model {
+
+    constructor(options) {
+        super(options);
+        return this;
+    }
+
+    createModel() {
+
+
+        this.position = {
+            x: 10,
+            y: 120
+        };
+
+
+
+
+        // if (!this.size) {
+        this.size = {
+            width: this.app.screen.width - 20,
+            height: 10
+        };
+        //}
+        const g = new Graphics();
+        g.beginFill(0x114411, 0.1);
+        g.lineStyle(3, 0x227722);
+        g.drawRect(this.position.x, this.position.y, this.size.width, this.size.height);
+        g.endFill(); 
+
+
+        return g;
+    }
+
+//    createBody() {
+//        const body = new Body({
+//            mass: 0,
+//            
+//            position: [this.pxm(this.position.x), this.pxm(this.position.y)]
+//            //angle: Math.PI
+//        });
+//        
+//        const land = new Box({
+//            width: this.pxm(this.size.width),
+//            height: this.pxm(this.size.height)
+//        });
+//        
+//        land.material = new Material;
+//
+//        body.addShape(land);
+//        return body;
+//    }
+}
+
+export default Land;

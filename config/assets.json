@@ -1,0 +1,33 @@
+{
+    "background": "textures/bg.jpg",
+    "logo": "textures/action-logo.png",
+    "paralax": {
+        "far": "textures/bg.jpg",
+        "near": "textures/base.png"
+    },
+    "button": {
+        "fullscreen": "textures/fullscreen.png",
+        "smallscreen": "textures/smallscreen.png",
+        "settings": "textures/cog.png",
+        "sound_on": "textures/sound-on.png",
+        "sound_off": "textures/sound-off.png"
+    },
+    "locale": {
+        "en": "i18n/en.json"
+    },
+    "flappy": {
+        "floating": "character/flap-floating.png",
+        "up": "character/flap-up.png",
+        "down": "character/flap-down.png"
+    },
+    "obstacle": {
+        "green": "textures/pipe-green.png",
+        "red": "textures/pipe-red.png"
+    },
+    "banner": {
+        "splash": "textures/action-banner.jpg"
+    },
+    "audio": {
+        "play": "audio/jingle-bells.{ogg,mp3}"
+    }
+}
