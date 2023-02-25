@@ -1,10 +1,10 @@
 import { Graphics, Circle, Container } from 'pixi.js';
-import UI from '$lib/game/core/2d/display/ui';
+import UI from '$core/2d/display/ui';
 import { Sprite, Texture } from 'pixi.js';
-import toggleFullscreen, {isFullscreen} from '$lib/game/utils/fullscreen';
+import {toggleFullscreen, isFullscreen} from '$core/utils/fullscreen';
 import { sound } from '@pixi/sound';
 
-import FadingMixin from '$lib/game/core/2d/mixins/fading-out-at-start-mixin';
+import FadingMixin from '$core/2d/mixins/fading-out-at-start-mixin';
 
 class Buttons extends UI {
 

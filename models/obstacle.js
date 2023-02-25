@@ -1,8 +1,8 @@
-import Model from '$lib/game/core/2d/models/matter-model';
+import Model from '$core/2d/models/matter-model';
 import { Graphics, Sprite, Texture } from 'pixi.js';
 import { Bodies, Body } from 'matter-js';
-import { drawRect } from '$lib/game/core/2d/utils/debug';
-import { between, percents } from '$lib/game/core//utils/math';
+import { drawRect } from '$core/2d/utils/debug';
+import { between, percents } from '$core//utils/math';
 
 class Obstacle extends Model {
     constructor(options = {}) {
@@ -40,7 +40,7 @@ class Obstacle extends Model {
                     || Obstacle.prototype.textures[Obstacle.prototype.defaultTexture];
 
             _options.types[type] = Object.assign({}, defaultOptions, _options.types[type]);
-            _options.types[type].chance = Math.percents(_options.types[type].chance);
+            _options.types[type].chance = percents(_options.types[type].chance);
         }
 
         Obstacle.prototype.options = _options;

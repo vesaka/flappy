@@ -1,4 +1,4 @@
-import Container from '$lib/game/core/container';
+import Container from '$core/container';
 import { Texture, TilingSprite, Graphics } from 'pixi.js';
 import { CompositeTilemap } from '@pixi/tilemap';
 class Paralax extends Container {

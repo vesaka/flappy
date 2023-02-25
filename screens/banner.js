@@ -1,4 +1,4 @@
-import UI from '$lib/game/core/2d/display/ui';
+import UI from '$core/2d/display/ui';
 import { Container, AnimatedSprite, Spritesheet, BaseTexture, Texture, Sprite, Rectangle } from 'pixi.js';
 import { Ticker } from 'pixi.js';
 class Banner extends UI {
@@ -127,7 +127,7 @@ class Banner extends UI {
 
     banner_loaded(asset) {
         const {app, size, position, textures} = this;
-console.log(asset);
+
         for (let i in textures) {
             const texture = new Texture(asset.texture, textures[i].frame);
             const sprite = new Sprite(texture);

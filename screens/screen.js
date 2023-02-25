@@ -1,6 +1,6 @@
-import UI from '$lib/game/core/2d/display/ui';
+import UI from '$core/2d/display/ui';
 import { Graphics, Text, Ticker } from 'pixi.js';
-import { BounceDown } from '$lib/game/core/utils/transitions';
+import { BounceDown } from '$core/utils/transitions';
 class Screen extends UI {
     constructor(options) {
         super(options);

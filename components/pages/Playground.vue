@@ -4,20 +4,20 @@
     </div>
 </template>
 <script>
-    import FlappyGame from '../flappy-game';
-    import PixiMixin from '$lib/game/core/2d/mixins/pixi-mixin';
-    
+    import FlappyGame from '$flappy/game';
+    import options from '$flappy/config/options.json';
+    import assets from '$flappy/config/assets.json';
+    import { useAuthStore, useGameStore } from '$flappy/bootstrap/stores';
     export default {
-        mixins: [PixiMixin],     
         mounted() {
             const {$store} = this;
 
             this.game = new FlappyGame({ 
                 container: this.$refs.container,
-                options: require(`$lib/game/flappy/config/options.json`),
-                settings: require(`$lib/game/flappy/config/settings.json`),
-                assets: require(`$lib/game/flappy/config/assets.json`),
-                $store });
+                options,
+                assets,
+                $store: useGameStore()
+            });
             this.game.load();
         },
         beforeUnmount() {

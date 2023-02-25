@@ -1,3 +1,8 @@
 {
-    "audio": "on"
+    "audio": "on",
+    "debug": true,
+    "apiUrl": "vesaka.info",
+    "base": "/game/flappy/",
+    "assetsBaseUrl": "/assets/flappy/"
 }
+

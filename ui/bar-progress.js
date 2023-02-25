@@ -1,5 +1,5 @@
 import { Graphics, RoundedRectangle } from 'pixi.js';
-import Progress from '$lib/game/core/2d/display/progress';
+import Progress from '$core/2d/display/progress';
 
 const toNum = (str, n = 0) => {
     return parseInt(str.replace('#', ''), n);

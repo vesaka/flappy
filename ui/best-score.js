@@ -1,6 +1,6 @@
-import UI from '$lib/game/core/2d/display/ui';
+import UI from '$core/2d/display/ui';
 import { Graphics, Ticker } from 'pixi.js';
-import FadingMixin from '$lib/game/core/2d/mixins/fading-out-at-start-mixin';
+import FadingMixin from '$core/2d/mixins/fading-out-at-start-mixin';
 
 class BestScore extends UI {
     constructor(setup) {
@@ -15,7 +15,7 @@ class BestScore extends UI {
         this.box = new Graphics;
         this.ticker = new Ticker;
 
-        this.best_score = this.$store.getters.load('score') || 0;
+        this.best_score = this.$store.bestScore || 0;
 
         this.highlight = this.createHighlight(setup.best_score.highlight);
         this.label = this.createLabel(setup.best_score.label);
@@ -54,10 +54,7 @@ class BestScore extends UI {
         if (score > this.best_score) {
             this.best_score = score;
             this.highlight.text = this.format(this.best_score);
-            this.$store.commit('data', {
-                key: 'score',
-                value: score
-            });
+            this.$store.bestScore = score;
         }
     }
 

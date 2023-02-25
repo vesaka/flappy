@@ -1,6 +1,6 @@
 import { Graphics } from 'pixi.js';
-import UI from '$lib/game/core/2d/display/ui';
-import FadingMixin from '$lib/game/core/2d/mixins/fading-out-at-start-mixin';
+import UI from '$core/2d/display/ui';
+import FadingMixin from '$core/2d/mixins/fading-out-at-start-mixin';
 
 class Score extends UI {
     

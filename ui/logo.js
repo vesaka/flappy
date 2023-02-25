@@ -1,5 +1,5 @@
 import { Graphics } from 'pixi.js';
-import UI from '$lib/game/core/2d/display/ui';
+import UI from '$core/2d/display/ui';
 import { Sprite, Texture, Ticker } from 'pixi.js';
 
 class Logo extends UI {

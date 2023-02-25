@@ -1,8 +1,8 @@
-import Model from '$lib/game/core/2d/models/matter-model';
+import Model from '$core/2d/models/matter-model';
 import { Graphics, Sprite, Texture } from 'pixi.js';
-import { character as characterEvents } from '$lib/game/flappy/config/events';
+import { character as characterEvents } from '$flappy/config/events';
 import { Body, Bodies, Query, Vector, Events } from 'matter-js';
-import { between } from '$lib/game/core//utils/math';
+import { between } from '$core//utils/math';
 
 class Character extends Model {
     constructor(options) {

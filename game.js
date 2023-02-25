@@ -1,29 +1,29 @@
-import GameBase from '$lib/game/core/2d/game-matter';
+import GameBase from '$core/2d/game-matter';
 
-import { main as mainEvents, game } from '$lib/game/flappy/config/events';
+import { main as mainEvents, game } from '$flappy/config/events';
 import { Texture, Container, TilingSprite } from 'pixi.js';
 import { Bounds, Vertices, Runner, Detector, Common } from 'matter-js';
 /** Models */
-import Character from '$lib/game/flappy/models/character';
-import Obstacle from '$lib/game/flappy/models/obstacle';
+import Character from '$flappy/models/character';
+import Obstacle from '$flappy/models/obstacle';
 
 /**
  * UI Elements
  */
-import Paralax from '$lib/game/flappy/ui/paralax';
-import Logo from '$lib/game/flappy/ui/logo';
-import Score from '$lib/game/flappy/ui/score';
-import BestScore from '$lib/game/flappy/ui/best-score';
-import Buttons from '$lib/game/flappy/ui/buttons';
-import ProgressBar from '$lib/game/flappy/ui/bar-progress';
+import Paralax from '$flappy/ui/paralax';
+import Logo from '$flappy/ui/logo';
+import Score from '$flappy/ui/score';
+import BestScore from '$flappy/ui/best-score';
+import Buttons from '$flappy/ui/buttons';
+import ProgressBar from '$flappy/ui/bar-progress';
 
 /**
  * Screens
  */
-import GameReset from '$lib/game/flappy/screens/game-reset';
-import Banner from '$lib/game/flappy/screens/banner';
+import GameReset from '$flappy/screens/game-reset';
+import Banner from '$flappy/screens/banner';
 
-import {raw, extend} from '$lib/game/core/utils/object';
+import {raw, extend} from '$core/utils/object';
 
 import Stats from 'stats.js';
 class FlappyGame extends GameBase {
@@ -248,7 +248,7 @@ class FlappyGame extends GameBase {
             }
 
             if (0 === app.ticker.lastTime % 10) {
-                console.clear();
+                //console.clear();
             }
             
             stats.end();

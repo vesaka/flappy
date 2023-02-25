@@ -1,14 +1,19 @@
 <template>
     <div class="flex flex-col">
         <div class="flex flex-row text-center z-10 bg-white bg-hero-texture">
-            <button v-for="route in routesLinks" :class="linkClass" @click="goTo(route.name)" v-html="route.title"></button>
+            <RouterLink v-for="route in routesLinks" :to="route.path" :class="linkClass" v-html="route.title"></RouterLink>
         </div>
-
-        <router-view class="flex flex-grow h-full"></router-view>
+        <RouterView v-slot="{ Component, route }">
+            <transition :name="route.meta.transitionName || 'scale-up'">
+                <component :is="Component" class="flex flex-grow h-full"/>
+            </transition>
+        </RouterView>
     </div>
 </template>
 <script>
+    import { BASE, PLAY, SETTINGS, TUTORIAL } from './bootstrap/paths';
     const PATHNAME = '/game/flappy';
+    
     export default {
         methods: {
             link(path) {
@@ -26,12 +31,15 @@
             },
             routesLinks() {
                 return [{
+                        path: PLAY,
                         name: 'game',
                         title: 'Game'
                     }, {
+                        path: TUTORIAL,
                         name: 'tutorial',
                         title: 'Tutorial'
                     }, {
+                        path: SETTINGS,
                         name: 'settings',
                         title: 'Settings'
                     }];

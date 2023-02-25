@@ -1,4 +1,4 @@
-import Model from '$lib/game/core/2d/models/matter-model';
+import Model from '$core/2d/models/matter-model';
 import { Graphics, Sprite, Texture } from 'pixi.js';
 
 

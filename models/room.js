@@ -1,5 +1,5 @@
 import { Container, Texture, TilingSprite, Graphics } from 'pixi.js';
-import Model from '$lib/game/core/2d/models/matter-model';
+import Model from '$core/2d/models/matter-model';
 class Room extends Model {
     constructor(options) {
         super(options);
